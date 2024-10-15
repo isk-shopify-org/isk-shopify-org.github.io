@@ -1,0 +1,225 @@
+ISKPRO
+Developer Guide:
+Please read the development process document carefully and ensure you follow it closely. Moving forward, we will strictly adhere to the outlined instructions, and any breach of these guidelines may lead to action being taken. It is crucial that everyone respects and complies with the process.
+If you encounter any issues or challenges in following the guidelines, please reach out to your Team Lead for assistance. If the issue persists, you can escalate it to @jay for further support.
+
+Git
+If the Git repository is not created or not assigned to you, please contact @jay in the Teams Bitbucket, Teamwork, or Server channel.
+.gitignore file for WP: https://drive.google.com/file/d/1LBXQhdWelLxu6KbxtGwdiVLEx16zNVs-/view?usp=sharing
+Environment Branches (Main, Staging, Dev)
+Main (Production): Root branch. Client approved production ready code, synced to live environment. 
+Staging (Dev Environment): Client reviews and final content updates
+Dev (Local Environment): Internal reviews and developer testing sandbox
+Feature Branches
+A self-contained feature branch with all the code needed to deploy a specific feature to any environment at any time. A feature branch should be created for every Teamwork ticket. The feature branch should be created in a way that allows it to be merged into any environment branch and deployed as a fully working feature.
+Pull Requests
+Pull Requests should be created in Bitbucket for every feature branch, to be merged into the main branch. This will allow Team Leads to accept the PR and deploy the feature to the live site once the client approves, without the need to send back to a developer to deploy.
+
+GIT Workflow
+Loosely based on the GitFlow branching strategy, we incorporate a similar methodology for main branch trees. See Git Flow here.
+Useful Git Commands: https://docs.google.com/document/d/1jnzqTtyilShi80AprWONm_bzTRC-FakBlpFJzQfmDRk/edit
+
+GIT Commit: Ensure that all Git commit messages clearly describe the task or changes being committed. Avoid using irrelevant messages. The commit message should provide a clear understanding of the purpose of the changes being made.
+Code Push: You are responsible for pushing code daily without fail. To avoid conflicts, do not wait until the end of the day to commit your code. Instead, please commit your changes immediately after completing each feature or significant task. If you haven’t completed any features by the end of the day, you must still push any progress made. Regular commits will help maintain a smoother workflow and minimize potential conflicts.
+
+
+1. Develop Feature Locally
+Create a new feature branch from the main branch (as this branch contains the latest approved work) for every individual task/feature.
+Name the branch to reflect the Task Name that closely resembles the task title
+Example: feature/news-listing-page–desktop–ui
+
+Push feature branches to remote as soon as the work is started so Team has access to the work in progress in case another developer needs to work on the feature.
+Create a pull request to main. 
+2. Deploy Feature to Dev
+Merge feature branch into Dev branch and push to remote (pushing to remote will deploy code to the dev environment) and ensure the feature works as expected before merging into Staging for client review.
+!! IMPORTANT !!  Thoroughly QA all work before merging to Staging branch
+3. Deploy Feature to Staging
+When a feature is confirmed to be working on the dev environment, merge the Feature branch into the Staging branch and push to deploy to the Staging environment.
+Confirm the feature is working in Staging
+Update the Teamwork Ticket/Task in the following format
+
+Add the Pull Request link to the field on the Teamwork ticket. 
+Update the Preview Link to point to the exact feature on the Test theme where it can be viewed and tested by the team.
+Move the ticket into the In Code Review, and assign the ticket to the Team lead
+Team Lead will either accept the Pull Request to deploy, or move the ticket back to the Open list and assign to you with notes to continue work. 
+
+Project workflow
+Design Kickoff & Estimates (Pre-Sprint)
+Before the sprint begins, PM will conduct a Project Kickoff Meeting with the Team Leads and discuss the project scope, key deliverables, and get task estimates to ensure the sprint is well-planned and achievable.
+
+@pm can use the following format to get estimates and tasks creation in bulk in teamwork. https://iskstudio-my.sharepoint.com/:f:/g/personal/jay_isk_studio/Euf7rD9oJk9PqMlUIAzFWasBnDRiiuUlzCcWAOP2sI_qug?e=9CsbC4
+Task Creation & Assignment Process (Pre-Sprint)
+Before the sprint begins, PM is responsible for creating and assigning all tasks in the project management tool (e.g., Teamwork). Please ensure the team has a clear understanding of their responsibilities, deadlines, and workload for the upcoming sprint.
+
+Key Responsibilities of PM:
+Task Creation:
+@pm will create all tasks based on the project’s scope, requirements, and the details provided in the shared sheet. 
+@PM should break down the project into smaller, manageable tasks that are easier to track and complete. Each task should focus on a specific part of the project to ensure clarity and reduce complexity for the development team
+Each task must be specific and include enough detail for developers and team leads to understand the expectations.
+@pm will add all the resources and define the work scope for the task.
+Estimated Hours Assignment:
+For each task, @PM will estimate the time required to complete it based on the shared task breakdown sheet. These estimates help track progress, manage workload, and ensure tasks are realistically scoped to fit within the sprint timeline.
+@pm will receive an email if any developer spends 90% of the estimated time on a task, so providing an estimated time is required.
+Milestone:
+@pm will create milestone for each sprint.
+Task Assignment:
+Once the tasks and time estimates are created, PM will assign tasks either directly to Team Leads or to specific Team Members, depending on the project structure.
+Simpler or more focused tasks can be assigned directly to Team Members with clear descriptions of what needs to be done.
+Review & Adjustment:
+Before the sprint officially starts, PM should collaborate with Team Leads to review the task list and ensure everything is appropriately assigned and scoped.
+If any adjustments are needed to the tasks or estimated hours, those changes should be made before the sprint begins to avoid bottlenecks or unclear responsibilities.
+Importance of Pre-Sprint Task Creation:
+Clarity & Preparation: Task creation and assignment must be completed before the sprint starts to ensure the team is prepared to begin work immediately once the sprint kicks off. This minimizes downtime and confusion regarding priorities.
+Efficient Workflows: Having well-defined tasks with clear time estimates helps in tracking progress throughout the sprint. It also ensures developers and leads know what is expected, reducing the need for back-and-forth clarification during development.
+Resource Allocation: Assigning tasks before the sprint allows PM and Team Leads to assess team capacity, balance workloads, and ensure that no individual is overloaded or underutilized.
+Questions & Commenting – if you need clarification or more info about a task, please ask your question in the comments section of the task and direct your questions to the @pm or appropriate person with the @ symbol.
+
+Teamwork
+Daily Workflow
+Address all Issues (labeled “Issues” in teamwork)
+All bugs should be fixed prior to project work being performed, especially if the bug is causing major defects or proper site operation. 
+
+Time Log: Please log your time daily without interruptions.
+Log in to: https://tw.creativeisk.com/ (Login details are the same as Teamwork. This tool is only for logging time; everything else will be managed through Teamwork).
+At the start of your day, log/Estimate time for the entire day (8 hours).
+
+
+
+If a task has not been created, reach out to @pm immediately to request task creation. Do not create tasks on your own. If @pm is unavailable, you can contact to Your Team Lead, @aj or @jay in the Teams Bitbucket, Teamwork, and server channel.
+Once a task is completed, please log the hours taken and add notes along with the Bitbucket link in the time log. It will automatically sync with Teamwork.
+If your time log is successfully synced, you will see a green ribbon or "synced" indicator on the left side. It should sync within an hour. If it hasn’t synced within 2-3 hours, please contact your team lead and @jay in the Teams Bitbucket, Teamwork, and server channel.
+
+
+
+Teamwork Task Notes/Comments: Please add your Notes/Comments in the following format daily without interruptions.. Failure to log time for assigned tasks may result in action being taken.
+
+
+
+Teamwork Board workflow
+
+Open:
+Once the sprint is started and assigned to developers, but work has not yet begun, the sprint will remain in the Open state.
+@pm is responsible for creating all tasks in the task management tool with the Estimated time (e.g., Teamwork), and once the sprint is ready to begin, @pm will move the sprint to the Open state.
+The Project Manager (PM) or Team Leads (TLs) will assign tasks from the sprint to individual team members.
+In Progress:
+As soon as a developer starts working on a task, they must move the task from the Open state or task list to In Progress.
+This indicates that the task is actively being worked on. The developer should keep the task updated with relevant details, commits, and any observations made during development.
+Code Review: (Once a developer has completed a task, they must:)
+Move the task to the Code Review state.
+Assign the task to the Team Lead for review.
+UNIT Testing: Before submitting for review, the developer must perform unit testing on their work to ensure functionality and code quality.
+Provide detailed commit messages and comments summarizing the work done, including any edge cases or special considerations. 
+In Testing: (Code Approved by Team Lead)
+Only Team Leads (TLs) are responsible for moving tasks to the In Testing state.
+Code Review Process:
+The Team Lead reviews the code and the task performed by the developer.
+If the TL is satisfied with the quality, correctness, and completeness of the work, they move the task to In Testing and assign it to the QA team.
+If the TL finds issues during the review, the task will be moved back to the Open state. The TL will add their feedback, notes, and comments to the task, detailing the necessary fixes or improvements.
+The task is then reassigned to the original developer, who must address the feedback and resubmit the task for review.
+Internal Review/Reopen:  (Task Completed by QA)
+Once a task is in the In Testing state, the QA team will pick it up for final testing and move it to Internal Review or Reopen state.
+QA Review Process:
+The QA team ensures that all prior steps have been completed by the developers (e.g., unit testing, code review).
+If the QA team identifies any issues or incomplete steps, they will use Notes format and add finding and  tag @aj and @jay in the task and reassign it to the Team Leads.
+QA will provide detailed feedback, including any bugs, missed requirements, or issues found during testing.
+The QA will then either move it to Internal Review or reassign it to the developer for further work.
+Once the task passes QA testing without any issues, it will be marked as Internal Review.
+If any issues arise after Internal Review, the task may be Reopened and assigned for further work.
+Client Review//Reopen: (Task Completed or Tested by @pm)
+Only @pm is responsible for moving tasks to the Client Review state.
+Closed: (Once the approval got from the client)
+Only @pm is responsible for moving tasks to the Closed state.
+
+Additional Notes & Suggestions:  
+Communication: Developers and team leads should maintain clear and consistent communication. Regular updates on progress or roadblocks are crucial for efficient task management.
+Testing Before Code Review: Developers must ensure thorough testing before assigning tasks for review. It reduces back-and-forth between team members and speeds up the overall process.
+Detailed Documentation: Developers should document their work in task notes, particularly in areas where future developers or QA might need additional context (e.g., new functions, external libraries, or unique logic).
+Standardized Unit Testing: Establish a clear unit testing standard across the team to ensure consistency in quality before tasks are handed off for review.
+DAILY SCRUMS
+After each SCRUM meeting, the @pm will be responsible for preparing and sharing the Minutes of the Meeting (MOM) with the Management Team to keep them informed about the progress and any important updates.
+Morning Scrum(12:30 PM)
+Objective: Kickstart the day by discussing ongoing tasks, reviewing progress, and assigning new tasks.
+Participants: PM, Team Leads
+Pre-Scrum Preparation by TLs:
+Team Leads should have an internal meeting with their team members before the Morning Scrum to review each member’s task progress, identify any blockers, and assign tasks for the day.
+TLs must be fully aware of the current status of their team members' tasks and any challenges they are facing.
+Morning Scrum Agenda:
+Task Status Update:
+TLs will provide an update on their team's task progress.
+Blockers:
+Identify any issues or blockers that need to be addressed to ensure task completion.
+Task Assignment:
+If any new tasks need to be assigned, the PM and TLs will discuss and ensure they are delegated effectively.
+Evening Scrum (7:00 PM)
+Objective: Review the day's progress and ensure tasks are on track for completion.
+Participants: PM, Team Leads
+Evening Scrum Agenda:
+Task Status Review:
+TLs will update the PM on the status of the tasks assigned during the day.
+Any tasks completed, in progress, or delayed should be discussed.
+Challenges & Blockers:
+TLs should report any challenges faced by their team members during the day.
+If there are unresolved blockers from the morning, strategies to resolve them should be discussed.
+Plan for the Next Day:
+Outline priorities for the next day, including any carryover tasks or new assignments.
+
+All the team scrums should be conducted through Microsoft Teams and scheduled, with the PM included in the call.
+
+PROJECTS REVIEW
+Weekly Meeting (Thursday):
+The Weekly Projects Review Meeting is held every Thursday, with a focus on reviewing the progress of all ongoing projects, addressing any challenges, and planning the next steps. If Thursday happens to be a holiday, the meeting will be shifted to Friday.
+Objective:
+To evaluate the current status of all projects.
+To identify and resolve any blockers or issues.
+To discuss upcoming milestones and goals for the next week.
+To ensure the project remains on track according to the timeline and scope. 
+
+Project Review Meeting - Post Delivery
+After the successful delivery of a project, the PM will conduct a Review Meeting with the team to discuss the project’s performance, client feedback, and insights from the QA team. The goal is to identify areas for improvement and ensure that any mistakes made during the project are not repeated in future projects.
+Key Responsibilities of PM:
+Gathering Feedback:
+PM will collect and consolidate feedback from:
+Client: Any comments, concerns, or suggestions related to the project, timelines, or deliverables.
+QA Team: Insights on issues faced during testing, bugs encountered, or areas of improvement in the development process.
+Conducting the Review Meeting:
+The PM will organize a meeting with all team members involved in the project, including developers, team leads, and QA.
+Agenda:
+Client Feedback: Share key points from the client, both positive and constructive.
+QA Feedback: Discuss any recurring bugs or issues identified by the QA team during testing.
+Team Reflection: Open the floor for team members to discuss any challenges or areas they feel could be improved for future projects.
+Lessons Learned: Document mistakes or areas where the team can improve. Focus on solutions and best practices to prevent these issues from happening again.
+Action Plan for Future Projects:
+The PM will ensure that feedback from the client and QA team is documented and applied to future projects.
+A checklist of lessons learned will be created to prevent repeating the same mistakes.
+Any improvements or process changes identified during the meeting should be implemented in future project workflows.
+Follow-Up:
+After the review, the PM and TLs will track the team’s adherence to these improvements in subsequent projects, ensuring continuous improvement and project success.
+
+WFH
+Work From Home Policy
+If you are working from home and need to step away from your computer for more than 15 minutes, please inform your Team Lead, as well as @Aj.
+To maintain effective communication and collaboration while working remotely, all meetings including daily scrums, weekly reviews will be conducted via video calls.
+
+
+GENERAL
+Acknowledge the Message/Comment when someone tags you in the Teams & Teamwork. This lets the sender know you've read the message.
+
+
+
+
+Tips & Tricks (Shopify)
+Site Migration
+Migrate all images from Dev theme and upload to Production store
+Copy Dev settings_data.json to local
+Strip out all content except for image URLs 
+In VSCode, search for “shopify:\/\/shop_images\/” and grab the filename from all matches (highlight all like occurrences and copy filename(s) in one copy move)
+Paste all filenames to newly created files.txt file
+Install `wget` Homebrew module “$ brew install wget”
+On the command line, run “$ wget -i files.txt” on files.txt which will download all files to the current directory.
+Upload all downloaded files to Production Files library (Settings > Files). 
+Clone entire theme from Dev to Production (all images should be visible if step 1 was followed correctly)
+Enable password protection
+Publish new theme (with password protection page enabled)
+Trigger sync of all content types (including metafields) from Dev to Production (using the Duplicate Store app or Excelify app). Note: if it’s a Shopify Plus store, Shopify will do this by request and the data sync is much quicker than apps.
+Rebuild nav menus (manually)
+Disable password protection to set live to the public.
